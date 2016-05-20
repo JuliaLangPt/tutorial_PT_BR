@@ -24,10 +24,13 @@ Para usar a linguagem sem precisar instalar, acesse: juliabox.org e entre com um
 
 **2.** Online
 Com a conta no JuliaBox.org, faça um clone de todos os notebooks:
-    > vá em **Sync** na pagina principal após logado
-    > Em Git Repositories, copie e cole este repositorio https://github.com/jmarcellopereira/juliatutorialbr.git no campo logo abaixo.
-    > tab para completar o campo do meio. tab novamente e a aparecerá a pasta juliatutorialbr. 
-    > click no ##+## e pronto! todo o conteúdo foi copiado para a pasta juliatutorialbr da sua conta no juliabox.
+> vá em **Sync** na pagina principal após logado
+    
+> Em Git Repositories, copie e cole este repositorio https://github.com/jmarcellopereira/juliatutorialbr.git no campo logo abaixo.
+    
+> tab para completar o campo do meio. tab novamente e a aparecerá a pasta juliatutorialbr. 
+
+> click no ##+## e pronto! todo o conteúdo foi copiado para a pasta juliatutorialbr da sua conta no juliabox.
 
 **2.** Offline
 
