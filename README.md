@@ -37,7 +37,9 @@ Com a conta no JuliaBox.org, faça um clone de todos os notebooks:
 Baixe o instalador no julia.org e instale o jupyter (jupyter.org). Baixe estes notebooks e faça o upload no jupyter.
 
 **INSTALAÇÃO DO JULIA**
+
 Via synaptic
+
 digite julia e veja se mostra a versão 0.4.2 ou superior. Se não, instale via PPA
 
 Via terminal
@@ -51,12 +53,14 @@ Adicionando pacotes no terminal
 	$julia> Pkg.add(“IJulia”)
     
 Se ocorrer:
+
 Failed to execute "git ls-remote --tags --heads git://github.com/twbs/bootstrap-sass.git", exit code of #128 fatal: unable to connect to github.com: github.com[0: 192.30.252.130]: errno=Connection timed out
 
 isso acontece em funcao do firewall. Use:
 	$ git config --global url."https://".insteadOf git://
     
 se ocorrer o erro:
+
 WARNING: ZMQ had build errors.
  - packages with build errors remain installed in /home/jmp/.julia/v0.4
  - build the package(s) and all dependencies with `Pkg.build("ZMQ")`
@@ -65,18 +69,28 @@ WARNING: ZMQ had build errors.
 significa que ha dependencia de algum recurso de compilação. Instale o “CodeLite” via Synaptics ou Apper que resolve.
 
 Ou 
+
 	$sudo apt-get update && apt-get upgrade
 	$sudo apt-get install build-essential
     
 pacotes importantes
+
 	Julia>Pkg.add("Gadfly")		:Graficos
+    
 	Julia>Pkg.add("PyPlot")	:Facilitar graficos
+    
 	Julia>Pkg.add("Roots")		: raizes e outras funçõs
+    
 	Julia>Pkg.add("Winston")	: graficos	
+    
 	Julia>Pkg.add("ODE")		: equações diferenciais
+    
 	Julia>Pkg.add("SingularIntegralEquations")
+    
 	Julia>Pkg.add(“SymPy”) 		: para trabalhar com matematica simbolica no julia
     
 instalar pacote nao oficial
+
 	Julia>Pkg.clone("git://github.com/hwborchers/NumericalMath.jl.git")
+    
 	Julia>Pkg.init(“NumericalMath”)
