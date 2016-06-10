@@ -1,0 +1,4 @@
+Tabela de softwares
+Julia
+sage math
+Octave
