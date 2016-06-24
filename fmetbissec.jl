@@ -9,7 +9,7 @@ ex metbissec("x^2 - 2*x - 8",-5,5,0.000001)
 
 """
 
-function metbissec(funcao, a, b, tol = 0.00001)
+function fmetbissec(funcao, a, b, tol = 0.00001)
     
 println("f(x) = ",funcao)
 println()
