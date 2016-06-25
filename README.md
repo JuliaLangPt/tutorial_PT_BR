@@ -1,5 +1,3 @@
-Este tutorial foi Criado por João Marcello - jmarcellopereira@ufpi.edu.br
-
 ##Tutorial da linguagem Julia##
 
 As características de Julia são tipagem opcional, multiple dispatch, e bom desempenho, alcançado utilizando inferência de tipos e compilação just-in-time (JIT) , implementada utilizando LLVM . Ela é multi-paradigma, combinando características de programação imperativa, funcional e orientada a objetos. A sintaxe de Julia é similar a do GNU Octave ou MATLAB(R) e consequentemente os programadores que que já utilizam estas linguagens devem sentir-se imediatamente confortáveis com Julia. Enquanto MATLAB(R) é um bem eficiente para experimentações e explorações de álgebra linear numérica, possui limitações para tarefas computacionais fora deste campo relativamente pequeno. Julia mantem a facilidade e expressividade do MATLAB(R) para computação numérica de alto nível, mas ultrapassa as limitações comparadas a uma linguagem de programação de propósito geral. Para alcançar isso, Julia é construída com heranças das linguagens de programação matemática, mas também herda muito de outras linguagens dinâmicas populares, incluindo Lisp, Perl, Python, Lua, and Ruby.
