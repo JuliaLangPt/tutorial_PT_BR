@@ -5,11 +5,6 @@ Autor: João Marcello - jmarcellopereira@ufpi.edu.br
 *   Julia é uma linguagem de programação compilada (JIT – Just in time) open source de alto nível projetado com foco na computação científica e numérica de alto desempenho (BEZANSON et al., 2015). É relativamente jovem, posto que teve início no MIT em agosto de 2009 e, em fevereiro de 2012, tornou-se open source. É fruto do trabalho de três pesquisadores: Stefan Karpinski, Jeff Bezanson, e Viral Shah (BEZANSON et al., 2015). Foi pensada como uma linguagem para computação científica suficientemente rápida como C ou Fortran, mas igualmente fácil de aprender como o MATLAB e o Mathematica, com o objetivo de facilitar a modelagem computacional. É escrito em C, C++ e Scheme, e a biblioteca padrão é escrita utilizando a própria linguagem Julia. Possui forte inspiração em MATLAB, Lisp, C, Fortran, Mathematica, Python, Perl, R, Ruby, Lua, além de compartilhar muitas características de Dylan e Fortress.
 
 
-### CARACTERISTICAS DA LINGUAGEM DE PROGRAMAÇÃO JULIA###
-
-*   Julia é extensível a partir da utilização de módulos carregáveis.
-*   O interpretador do Julia trabalha em conjunto com os softwares gnuplot e Grace para plotar gráficos, grafos e para salva-los.
-
 ### VANTAGENS DA LINGUAGEM DE PROGRAMAÇÃO JULIA###
 
 *   Livre e open source (Licença MIT)
