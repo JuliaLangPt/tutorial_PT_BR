@@ -7,6 +7,8 @@ Entre os intervalo [ao,bo] e a tolerencia de erro daddo por tol.
 
 ex metbissec("x^2 - 2*x - 8",-5,5,0.000001)
 
+adaptado de http://goo.gl/pQNh6z
+
 """
 
 function fmetbissec(funcao, a, b, tol = 0.00001)

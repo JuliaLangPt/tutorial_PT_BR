@@ -6,6 +6,8 @@ Calcula uma aproximação para uma raiz da função de f(x)
 Entre os intervalo [ao,bo] e a tolerencia de erro daddo por tol.
 
 ex bissec("x^2 - 2*x - 8",-5,5,0.000001)
+
+adaptado de http://goo.gl/pQNh6z
 """
 
 function fbissec(funcao,a,b,tol)
