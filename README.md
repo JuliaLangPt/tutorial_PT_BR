@@ -1,10 +1,16 @@
 Autor: João Marcello - jmarcellopereira@ufpi.edu.br
 
-##Tutorial da linguagem Julia##
+### INFORMAÇÕES GERAIS ###
 
-As características de Julia são tipagem opcional, multiple dispatch, e bom desempenho, alcançado utilizando inferência de tipos e compilação just-in-time (JIT) , implementada utilizando LLVM . Ela é multi-paradigma, combinando características de programação imperativa, funcional e orientada a objetos. A sintaxe de Julia é similar a do GNU Octave ou MATLAB(R) e consequentemente os programadores que que já utilizam estas linguagens devem sentir-se imediatamente confortáveis com Julia. Enquanto MATLAB(R) é um bem eficiente para experimentações e explorações de álgebra linear numérica, possui limitações para tarefas computacionais fora deste campo relativamente pequeno. Julia mantem a facilidade e expressividade do MATLAB(R) para computação numérica de alto nível, mas ultrapassa as limitações comparadas a uma linguagem de programação de propósito geral. Para alcançar isso, Julia é construída com heranças das linguagens de programação matemática, mas também herda muito de outras linguagens dinâmicas populares, incluindo Lisp, Perl, Python, Lua, and Ruby.
+*   Julia é uma linguagem de programação compilada (JIT – Just in time) open source de alto nível projetado com foco na computação científica e numérica de alto desempenho (BEZANSON et al., 2015). É relativamente jovem, posto que teve início no MIT em agosto de 2009 e, em fevereiro de 2012, tornou-se open source. É fruto do trabalho de três pesquisadores: Stefan Karpinski, Jeff Bezanson, e Viral Shah (BEZANSON et al., 2015). Foi pensada como uma linguagem para computação científica suficientemente rápida como C ou Fortran, mas igualmente fácil de aprender como o MATLAB e o Mathematica, com o objetivo de facilitar a modelagem computacional. É escrito em C, C++ e Scheme, e a biblioteca padrão é escrita utilizando a própria linguagem Julia. Possui forte inspiração em MATLAB, Lisp, C, Fortran, Mathematica, Python, Perl, R, Ruby, Lua, além de compartilhar muitas características de Dylan e Fortress.
 
-Vantagens de Julia em comparação com outros sistemas são:
+
+### CARACTERISTICAS DA LINGUAGEM DE PROGRAMAÇÃO JULIA###
+
+*   Julia é extensível a partir da utilização de módulos carregáveis.
+*   O interpretador do Julia trabalha em conjunto com os softwares gnuplot e Grace para plotar gráficos, grafos e para salva-los.
+
+### VANTAGENS DA LINGUAGEM DE PROGRAMAÇÃO JULIA###
 
 *   Livre e open source (Licença MIT)
 *   Tipos definidos pelo usuário são rápidos e compactos como tipos nativos
@@ -18,6 +24,9 @@ Vantagens de Julia em comparação com outros sistemas são:
 *   Capacidade semelhante a de uma poderosa shell para gerenciar outros processos
 *   Macros de forma parecida a Lisp e outras facilidades de metaprogramação
 
+### APLICAÇÕES ###
+
+*   Julia é projetado para resolver problemas matemáticos numericamente, que consiste na manipulação numérica dos dados. Isso significa que nem sempre ele não poderá dar uma solução analítica para um problema, e não deve ser confundido com programas como o Mathematica ou Maple, que trablham com soluções simbólicas, fazendo a manipulação algébrica.A maioria dos problemas matemáticos reais (particularmente em engenharia) não têm soluções simbólicas puras.
 
 
 **1.** Online
@@ -34,7 +43,7 @@ Com a conta no JuliaBox.org, faça um clone de todos os notebooks:
 
 > click no ##+## e pronto! todo o conteúdo foi copiado para a pasta juliatutorialbr da sua conta no juliabox.
 
-**2.** Offline
+**3.** Offline
 
 Baixe o instalador no julia.org e instale o jupyter (jupyter.org). Baixe estes notebooks e faça o upload no jupyter.
 
@@ -45,13 +54,19 @@ Via synaptic
 digite julia e veja se mostra a versão 0.4.2 ou superior. Se não, instale via PPA
 
 Via terminal
+
 	sudo add-apt-repository ppa:staticfloat/juliareleases
+	
 	sudo add-apt-repository ppa:staticfloat/julia-deps
+	
 	sudo apt-get update
+	
 	sudo apt-get install julia
     
 Adicionando pacotes no terminal
+
 	$julia
+	
 	$julia> Pkg.add(“IJulia”)
     
 Se ocorrer:
@@ -59,6 +74,7 @@ Se ocorrer:
 Failed to execute "git ls-remote --tags --heads git://github.com/twbs/bootstrap-sass.git", exit code of #128 fatal: unable to connect to github.com: github.com[0: 192.30.252.130]: errno=Connection timed out
 
 isso acontece em funcao do firewall. Use:
+
 	$ git config --global url."https://".insteadOf git://
     
 se ocorrer o erro:
@@ -73,6 +89,7 @@ significa que ha dependencia de algum recurso de compilação. Instale o “Code
 Ou 
 
 	$sudo apt-get update && apt-get upgrade
+	
 	$sudo apt-get install build-essential
     
 pacotes importantes
