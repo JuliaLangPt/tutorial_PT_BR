@@ -1,4 +1,7 @@
-Autor: João Marcello - jmarcellopereira@ufpi.edu.br
+**Autor: João Marcello** - jmarcellopereira@ufpi.edu.br
+
+**Agradecimento aos colaboradores:** fcard(https://github.com/fcard), Scott P. Jones(https://github.com/ScottPJones), Ismael(https://github.com/Ismael-VC) Estudantes do LeA (http://www.lea.unb.br), Prof. Neuton (UFPI) e muitos outros. 
+
 
 ### INFORMAÇÕES GERAIS ###
 
