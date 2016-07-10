@@ -7,8 +7,7 @@ Entre os intervalo [ao,bo] e a tolerencia de erro daddo por tol.
 
 ex metbissec("x^2 - 2*x - 8",-5,5,0.000001)
 
-adaptado de http://goo.gl/pQNh6z
-
+adaptado de http://goo.gl/pQNh6z 
 """
 
 function fmetbissec(funcao, a, b, tol = 0.00001)
@@ -17,26 +16,32 @@ println("f(x) = ",funcao)
 println()
     
 @eval g(x) = $(parse(funcao)) # transforma a string em uma formula manipulável
-    
+   
 iteracao = 0
-    
-    while b - a >= tol
+    if g(a)*g(b) > 0 
+        println("Não há raiz no intervalo")
         
-    x_medio = (a + b)/2.0
+    else
+        x_medio = (a + b)/2
+        err = abs(g(x_medio))
+        
+        while err > tol
+            println("interação: ", iteracao , " : ", x_medio, ", valor função: ",g(x_medio))
+            
+            if g(a)*g(x_medio) < 0 
+                b = x_medio
+            else
+                a = x_medio
+            end
+            
+            x_medio = (a + b)/2
+            err = abs(g(x_medio))
+            iteracao = iteracao + 1
+            
+        end
         
         println("interação: ", iteracao , " : ", x_medio, ", valor função: ",g(x_medio))
+        return x_medio
         
-        if g(x_medio)*g(a) > 0.0
-            a = x_medio            
-        else
-            b = x_medio            
-        end
-        iteracao = iteracao + 1
-end
-    x_medio = (a + b)/2.0
-    
-    println("interação: ", iteracao , " : ", x_medio, ", valor função: ",g(x_medio))
-    
-return x_medio
-    
+    end     
 end
