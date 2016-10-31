@@ -35,11 +35,11 @@ Para usar a linguagem sem precisar instalar, acesse: juliabox.org e entre com um
 Com a conta no JuliaBox.org, faça um clone de todos os notebooks:
 > vá em **Sync** na pagina principal após logado
     
-> Em Git Repositories, copie e cole este repositorio https://github.com/JuliaLangPt/tutorial_PT_BR.git no campo logo abaixo.
+> Em Git Repositories, copie e cole este repositorio https://github.com/jmarcellopereira/juliatutorialbr.git no campo logo abaixo.
     
-> tab para completar o campo do meio. tab novamente e a aparecerá a pasta tutorial. 
+> tab para completar o campo do meio. tab novamente e a aparecerá a pasta juliatutorialbr. 
 
-> click no ##+## e pronto! todo o conteúdo foi copiado para a pasta tutorial da sua conta no juliabox.
+> click no ##+## e pronto! todo o conteúdo foi copiado para a pasta juliatutorialbr da sua conta no juliabox.
 
 **3.** Offline
 

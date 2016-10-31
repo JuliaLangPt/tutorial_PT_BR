@@ -5,38 +5,35 @@ Calcula uma aproximação para uma raiz da função de f(x)
 
 Entre os intervalo [ao,bo] e a tolerencia de erro daddo por tol.
 
-ex bissec("x^2 - 2*x - 8",-5,5,0.000001)
+adaptado de http://goo.gl/pQNh6z 
 
-adaptado de http://goo.gl/pQNh6z
 """
-
-function fbissec(funcao,a,b,tol)
-
-    x = 1
-    ao = a
-    bo = b
-    tol = tol
-    interacao = 0
-    println("f(x) = ",funcao)
-    println()
-    
-    @eval g(x) = $(parse(funcao))
-    
-    if (g(ao)*g(bo)<0)
+function bisectionc(a,b,tol)
+iteracao = 0
+    if (a^2 - 2*a)*(b^2 - 2*b) > 0 
+        println("Não há raiz no intervalo")
         
-        while (abs(bo-ao) > tol)  &&  (interacao<10000000)
-            x=(ao+bo)/2
-            interacao = interacao+1
-            if g(x)*g(ao) > 0
-                ao=x
-            else
-                bo=x
-            end
-        end
-        println("Interações: ",interacao)
-        println("Valor da raiz: ",x)
-        println("Valor de f(x)= ",round(g(x),8)," com erro menor que ",tol)
     else
-        println("Não há raízes no intervalo")
-    end    
+        x_medio = (a + b)/2
+        err = abs(x_medio^2 - 2*x_medio)
+        
+        while err > tol
+            println("interação: ", iteracao , " : ", x_medio, ", valor função: ",x_medio^2 - 2*x_medio)
+            
+            if (a^2 - 2*a)*(x_medio^2 - 2*x_medio) < 0 
+                b = x_medio
+            else
+                a = x_medio
+            end
+            
+            x_medio = (a + b)/2
+            err = abs(x_medio^2 - 2*x_medio)
+            iteracao = iteracao + 1
+            
+        end
+        
+    println("interação: ", iteracao , " : ", x_medio, ", valor função: ",x_medio^2 - 2*x_medio)
+    return x_medio
+        
+    end     
 end
