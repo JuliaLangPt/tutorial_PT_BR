@@ -17,7 +17,7 @@
 ### Conteúdo
 
  1. [Informações Gerais](./src/info_geral.md)
- 2. [Introdução](./src/src/0-INTRODUCAO-LINGUAGEM-PROGRAMACAO-JULIA.ipynb)
+ 2. [Introdução](./src/0-INTRODUCAO-LINGUAGEM-PROGRAMACAO-JULIA.ipynb)
  3. [Comandos Básicos](./src/)
  4. [Gerenciamento de pacotes](./src/2-GERENCIAMENTO-DE-PACOTES.ipynb)
  5. [Tipos de dados](./src/3-TIPOS-DE-DADOS.ipynb)
