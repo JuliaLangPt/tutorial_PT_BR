@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#instalação-julia-e-interfaces">INSTALAÇÃO JULIA E INTERFACES</a><ul>
+<li><a href="#máquina-local">MÁQUINA LOCAL</a></li>
+<li><a href="#interfaces">INTERFACES</a></li>
+<li><a href="#máquina-virtual">MÁQUINA VIRTUAL</a></li>
+<li><a href="#docker">DOCKER</a></li>
+</ul></li>
+<li><a href="#introdução-julia">INTRODUÇÃO JULIA</a><ul>
+<li><a href="#informações-gerais">INFORMAÇÕES GERAIS</a></li>
+<li><a href="#o-que-julia-é-capaz-de-fazer">O QUE JULIA É CAPAZ DE FAZER</a></li>
+<li><a href="#comparação-com-outros-softwares-de-computação-científica">COMPARAÇÃO COM OUTROS SOFTWARES DE COMPUTAÇÃO CIENTÍFICA</a></li>
+<li><a href="#como-aprender-julia">COMO APRENDER JULIA?</a></li>
+<li><a href="#casos-de-sucesso-com-julia">CASOS DE SUCESSO COM JULIA</a></li>
+<li><a href="#destaques-julia-0.5.x">DESTAQUES JULIA 0.5.X</a></li>
+<li><a href="#como-julia-funciona">COMO JULIA FUNCIONA?</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="instalação-julia-e-interfaces">INSTALAÇÃO JULIA E INTERFACES</h1>
+<h2 id="máquina-local">MÁQUINA LOCAL</h2>
+<p><strong>1. Linux</strong></p>
+<ul>
+<li><strong>Via synaptic/Apper ou outro gerenciador de software</strong></li>
+</ul>
+<p>digite <code>Julia</code> e veja se mostra a versão 0.5 ou superior. Se não, instale via terminal instalando o repositório do pacote.</p>
+<ul>
+<li><strong>Via terminal</strong></li>
+</ul>
+<p><strong>Ubuntu e Derivados (Lubuntu, Kubuntu, Mint, Zorin, Ementary, Linux Lite e outros)</strong></p>
+<p>Antes de instalar é necessário as ferramentes de compilação:</p>
+<blockquote>
+<p><code>:~$</code> sudo apt-get update &amp;&amp; sudo apt-get upgrade</p>
+</blockquote>
+<blockquote>
+<p><code>:~$</code> sudo apt-get install build-essential</p>
+</blockquote>
+<p>Instalação Julia:</p>
+<blockquote>
+<p><code>:~$</code> sudo add-apt-repository ppa:staticfloat/juliareleases</p>
+</blockquote>
+<blockquote>
+<p><code>:~$</code> sudo add-apt-repository ppa:staticfloat/julia-deps</p>
+</blockquote>
+<blockquote>
+<p><code>:~$</code> sudo apt-get update</p>
+</blockquote>
+<blockquote>
+<p><code>:~$</code> sudo apt-get install julia</p>
+</blockquote>
+<p><strong>Debian e Derivados (Deepin, NetRunner, Maui Linux, SteamOS, Metamorphose Linux[Br]e outros )</strong></p>
+<blockquote>
+<p><code>:~$</code> sudo apt-get update</p>
+</blockquote>
+<blockquote>
+<p><code>:~$</code> sudo apt-get install julia</p>
+</blockquote>
+<p><strong>RedHat e Derivados (CentOS, Scientific Linux, Fedora, Suse e outros)</strong></p>
+<p>Antes de instalar é necessário as ferramentes de compilação:</p>
+<blockquote>
+<p><code>:~$</code> sudo dnf grouplist</p>
+</blockquote>
+<blockquote>
+<p><code>:~$</code> sudo dnf groupinstall &quot;Development Tools and Libraries&quot; ou &quot;Ferramentas de Desenvolvimento C e Bibliotecas&quot;</p>
+</blockquote>
+<p>obs: para certeza do nome, veja a lista dos grupos. Instalação Julia:</p>
+<blockquote>
+<p><code>:~$</code> sudo dnf copr enable nalimilan/julia</p>
+</blockquote>
+<blockquote>
+<p><code>:~$</code> sudo yum install julia</p>
+</blockquote>
+<p><strong>Arch e Derivados (Manjaro, Antergos, Chakra e outros)</strong></p>
+<p>Antes de instalar é necessário as ferramentes de compilação:</p>
+<blockquote>
+<p><code>:~$</code> sudo pacman -Sy base-devel</p>
+</blockquote>
+<blockquote>
+<p><code>:~$</code> sudo pacman -Syu</p>
+</blockquote>
+<blockquote>
+<p><code>:~$</code> sudo pacman -S julia</p>
+</blockquote>
+<p><strong>OpenSuse (como Root)</strong></p>
+<p>Antes de instalar é necessário as ferramentes de compilação:</p>
+<blockquote>
+<p><code>:~#</code> zypper install --type pattern Basis-Devel</p>
+</blockquote>
+<p>Instalação Julia:</p>
+<blockquote>
+<p><code>:~#</code> zypper addrepo http://download.opensuse.org/repositories/science/openSUSE_AQUI_SUA_VERSÃO/science.repo</p>
+</blockquote>
+<blockquote>
+<p><code>:~#</code> zypper refresh</p>
+</blockquote>
+<blockquote>
+<p><code>:~#</code> zypper install julia</p>
+</blockquote>
+<p><strong>Slackware e Derivados (Salix, Absolute Linux, Porteus e outros)</strong></p>
+<blockquote>
+<p>Baixe o binário em http://julialang.org/downloads/. Entre na pasta onde esta o binário e execute:</p>
+</blockquote>
+<blockquote>
+<p><code>:~$</code> tar -xvzf julia-X.X.X-linux-x86_64.tar.gz</p>
+</blockquote>
+<blockquote>
+<p><code>:~#</code> ./configure &amp; make &amp; make install</p>
+</blockquote>
+<p><strong>Instalando via GIT (Administrador ou super usuário)</strong></p>
+<blockquote>
+<p><code>:~$</code> git clone git://github.com/JuliaLang/julia.git</p>
+</blockquote>
+<blockquote>
+<p><code>:~$</code> cd julia</p>
+</blockquote>
+<blockquote>
+<p><code>:~$</code> make</p>
+</blockquote>
+<blockquote>
+<p><code>:~$</code> ./install/bin/julia</p>
+</blockquote>
+<p>Ao executar o comando &quot;make&quot; este baixará vários outros arquivos, portanto é necessário conexão com internet. Se ocorrer:</p>
+<blockquote>
+<p>Failed to execute git ls-remote --tags --heads git://github.com/twbs/bootstrap-sass.git , exit code of #128 fatal: unable to connect to github.com: github.com[0: 192.30.252.130]: errno=Connection timed out</p>
+</blockquote>
+<p>Isto acontece em funcao de algum firewall. Use o comando abaixo e execute os comandos acima:</p>
+<blockquote>
+<p><code>:~$</code> git config --global url.&quot;https://&quot;.insteadOf git://</p>
+</blockquote>
+<p>se ocorrer o erro:</p>
+<blockquote>
+<p>WARNING: ZMQ had build errors. - packages with build errors remain installed in <code>/home/jmp/.julia/v0.4</code> - build the package(s) and all dependencies with <code>Pkg.build(&quot;ZMQ&quot;)</code> - build a single package by running its <code>deps/build.jl script</code></p>
+</blockquote>
+<p>significa que ha dependencia de algum recurso de compilação. Instale o &quot;CodeLite&quot; via Synaptics ou Apper que resolve. Ou use instale as ferramentas de compilação visto acima.</p>
+<p><strong>Usando Binários </strong></p>
+<p>Você pode usar <code>Julia</code> diretamente dos binários, sem instalá-lo em sua máquina. Isso é útil se você tiver distribuições antigas do Linux ou se você não tiver acesso de super usuário à máquina. Basta baixar os binários do site, extrair para um diretório (Em geral com o nome Julia). Neste diretório, entre na pasta bin e execute com privilégio de super usuário ou Root:</p>
+<blockquote>
+<p><code>:~$</code> sudo chmod +x julia</p>
+</blockquote>
+<blockquote>
+<p><code>:~$</code> ./julia</p>
+</blockquote>
+<p><strong>2. Windows</strong></p>
+<p>Baixe o executável no endereço:</p>
+<pre><code>https://julialang.org/downloads/</code></pre>
+<p>Após baixar é só executar.</p>
+<p><strong>3. macOS</strong></p>
+<p>Baixe o executável no endereço:</p>
+<pre><code>https://julialang.org/downloads/</code></pre>
+<h2 id="interfaces">INTERFACES</h2>
+<h3 id="repl">REPL</h3>
+<p>Julia vem com um interpretador por linha de comando interativa REPL (read-eval-print loop) integrada ao executável julia. O REPL é um ótimo lugar para começar a experimentar com a linguagem. Mas não é o melhor ambiente para fazer trabalhos de programação sérios de qualquer escala - para isso, um editor de texto, ou ambiente de notebook interativo (por exemplo, IJulia / Jupyter) é uma escolha melhor. Mas há vantagens em usar o REPL: é simples, extremamente leve, configurável e funciona sem qualquer instalação ou configuração extra.</p>
+<p>Depois de instalado, execute o comando abaixo e o REPL aparecerá:</p>
+<blockquote>
+<p><code>:~$</code> julia</p>
+</blockquote>
+<p><img src="Figuras/terminal-julia.png" align="center" width="500"></p>
+<p>Para sair execute <code>ctrl + d</code></p>
+<h3 id="ide-gráficas">IDE Gráficas</h3>
+<p>Existem várias interfaces gráficas para usar com Julia. Vejamos algumas: * <strong>JUNO</strong>: http://junolab.org/</p>
+<p>Juno é um ambiente de desenvolvimento integrado (IDE) para a linguagem Julia. Ele fornece ferramentas poderosas para ajudá-lo a desenvolver código. Juno é construído no Atom, um editor de texto fornecido por Github. <img src="Figuras/juno-lab.png" align="center" width="700"></p>
+<ul>
+<li><strong>LiClipse</strong>: http://www.liclipse.com/</li>
+</ul>
+<p>O LiClipse é um conjunto de plugins para aprimorar o Eclipse e melhorar a experiência geral do Eclipse. Inclui temas de IDE aprimorados, editores embutidos para muitas linguagens, melhorias de usabilidade para todos os editores do Eclipse, empacotamento de alguns plugins comuns e instaladores que são nativamente integrados em cada plataforma.</p>
+<p><img src="Figuras/liclipse-julia.png" align="center" width="700"></p>
+<ul>
+<li><strong>SublimeText</strong>: https://www.sublimetext.com/3</li>
+</ul>
+<p>É um editor de código-fonte proprietário multiplataforma escrito em C++ e Python. Ele suporta nativamente muitas linguagens de programação e linguagens de marcação, e sua funcionalidade pode ser estendida por usuários com plugins, normalmente construídos pela comunidade e mantidos sob licenças de software livre.</p>
+<p><img src="Figuras/sublime-julia.png" align="center" width="700"></p>
+<ul>
+<li><strong>Jupyter</strong>: http://www.jupyter.org</li>
+</ul>
+<p>O Notebook Jupyter é uma aplicação web derivdo do IPython que é um interpretador interativo para várias linguagens de programação, masespecialmente focado em Python. Ipython oferece &quot;type introspection&quot;, &quot;rich media&quot;, sintax shell, completação por tab e edição auxiliada por histórico de comando. Jupyter possui suporte para mais de 40 linguagens de programação, incluindo as mais populares em computação científica como Python, R, Julia e Scala</p>
+<p><img src="Figuras/jupyter-julia.png" align="center" width="700"></p>
+<p><strong>Como Instalar o Jupyter</strong></p>
+<p>A maneira mais fácil é usar o anaconda <a href="https://www.continuum.io/downloads" class="uri">https://www.continuum.io/downloads</a>. Baixe a versão Python 3.5.</p>
+<ul>
+<li><strong>Instalação Windows</strong>:</li>
+</ul>
+<p>Faç o download, execute o arquivo e pronto. No terminal execute:</p>
+<blockquote>
+<p><code>C:\Users\Usuario&gt;</code> conda install jupyter</p>
+</blockquote>
+<ul>
+<li><strong>Instalação Linux </strong></li>
+</ul>
+<p>Após download, execute no terminal: &gt; <code>:~$</code> sudo chmod +x arquivo_anaconda.sh<br />
+&gt; <code>:~$</code> ./arquivo.sh</p>
+<p>concorde com os termos e<br />
+&gt; <code>:~$</code> conda intall jupyter</p>
+<h2 id="máquina-virtual">MÁQUINA VIRTUAL</h2>
+<p>Uma máquina virtual (Virtual Machine – VM) pode ser definida como “uma duplicata eficiente e isolada de uma máquina real”. A IBM define uma máquina virtual como uma cópia isolada de um sistema físico, e essa cópia está totalmente protegida (LAUREANO, 2006).</p>
+<p>VirtualBox é uma aplicação de virtualização multi-plataforma. Em segundo lugar, ele estende as capacidades do seu computador existente para que ele possa executar vários que os sistemas operacionais ao mesmo tempo. Você pode instalar e executar o maior número de máquinas virtuais que você quiser - os únicos limites práticos são espaço em disco e memória.</p>
+<p>As técnicas e características do VirtualBox que fornece útil para Vários cenários são:</p>
+<ul>
+<li><p>Executar vários sistemas operacionais simultaneamente. VirtualBox Permite-lhe executar mais de um sistema operacional de cada vez. Dessa forma, você pode executar o software escrito para um sistema operacional em outra (por exemplo, o software Windows no Linux ou Mac) sem ter que reiniciar a usá-lo. Desde que você pode configurar quais tipos de hardware &quot;virtual&quot; Devem ser apresentadas a cada tal sistema operacional, você pode instalar um sistema operacional antigo: tal como o DOS ou OS / 2, mesmo que o hardware do computador real já não é suportada por esse sistema operacional.</p></li>
+<li><p>instalações de software mais fácil. Os fornecedores de software pode usar máquinas virtuais para enviar configurações de software inteiro. Por exemplo, a instalação de uma solução completa de servidor de correio na máquina real pode ser uma tarefa tediosa. Com VirtualBox, Tal configuração complexa (em seguida, um Muitas vezes chamado de &quot;aparelho&quot;) pode ser embalado em uma máquina virtual. Instalar e executar um servidor de correio tão fácil como a importação se torna um aparelho para VirtualBox tal.</p></li>
+<li><p>Testes e recuperação de desastres. Uma vez instalado, uma máquina virtual e discos rígidos virtuais ITS pode ser considerado um &quot;container&quot; que podem ser congeladas arbitrariamente, acordado, copiados, backup, e transportados entre hosts.</p></li>
+<li><p>Além disso, com o uso de outro recurso VirtualBox chamados de &quot;instantâneos&quot;, pode-se economizar proprietários estado de uma máquina virtual e voltar a esse Estado, se necessário. Desta forma, pode-se experimentar livremente com um ambiente de computação. Se algo der errado (por exemplo, depois de instalar o software mal-comportados ou infectar o convidado com um vírus), pode-se facilmente voltar a um instantâneo anterior e evitar a necessidade de backups e restaurações freqüentes.</p></li>
+<li><p>Qualquer número de instantâneos podem ser criados, que lhe permite viajar para trás e para frente no tempo de máquina virtual. Você pode apagar fotos enquanto uma VM está sendo executado para recuperar espaço em disco.</p></li>
+<li><p>consolidação de infra-estrutura. A virtualização pode reduzir hardware e eletricidade custos significativamente. Na maioria das vezes, os computadores hoje usam apenas uma fração de seu poder potencial e correr com cargas do sistema média baixa. Um monte de recursos de hardware, bem como a eletricidade é assim desperdiçada. Assim, em vez de correr muitos desses computadores físicos são apenas parcialmente utilizado Isso, pode-se embalar muitas máquinas virtuais em alguns servidores poderosos e equilibrar as cargas entre eles. Google Tradutor para empresas:Google Toolkit de tradução para appsTradutor de sitesGlobal Market Finder</p>
+<pre><code>    (https://www.virtualbox.org/manual/ch01.html#idm26)</code></pre></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"></code></pre></div>
+<h2 id="docker">DOCKER</h2>
+<p>De forma bem resumida, podemos dizer que o Docker é uma plataforma aberta, criada com o objetivo de facilitar o desenvolvimento, a implantação e a execução de aplicações em ambientes isolados (GOMES, 2017).</p>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"></code></pre></div>
+<p>Bibiografia</p>
+<pre><code>GOMES, Rafael. Docker para desenvolvedores,Leanpub, Victoria, British Columbia, Canada, 2017. 
+LAUREANO, Marcos. Máquinas virtuais e emuladores: conceitos, técnicas e aplicações. São Paulo, Novatec editora, 2006. ISBN-8575220985</code></pre>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"></code></pre></div>
+<h1 id="introdução-julia">INTRODUÇÃO JULIA</h1>
+<p><img src="Figuras/julia-logo.png" align="center" width="300"></p>
+<h2 id="informações-gerais">INFORMAÇÕES GERAIS</h2>
+<p><code>Julia</code> é uma linguagem de programação compilada (JIT – Just in time) open source de alto nível projetado com foco na computação científica e numérica de alto desempenho (BEZANSON et al., 2015). É relativamente jovem, posto que teve início no MIT em agosto de 2009 e, em fevereiro de 2012, tornou-se open source. É fruto do trabalho de quatro pesquisadores: Jeff Bezanson, Alan Edelman, Stefan Karpinski e Viral B. Shah (BEZANSON et al., 2015). Foi pensada como uma linguagem para computação científica suficientemente rápida como <code>C</code> ou <code>Fortran</code>, mas igualmente fácil de aprender como o <code>MatLab</code> e o <code>Mathematica</code>, com o objetivo de facilitar a modelagem computacional. É escrito em <code>C, C++ e Scheme</code>, e a biblioteca padrão é escrita utilizando a própria linguagem <code>Julia</code>. Possui forte inspiração em <code>MatLab, Lisp, C, Fortran, Mathematica, Python, Perl, R, Ruby, Lua</code>, além de compartilhar muitas características de <code>Dylan</code> e <code>Fortress</code>.</p>
+<p><img src="Figuras/logos-computacao-cientifica-influencia-julia.png" align="center" width="500"></p>
+<h3 id="características-da-linguagem-julia">CARACTERÍSTICAS DA LINGUAGEM JULIA</h3>
+<ul>
+<li>Despacho múltiplo: permite definir diferentes comportamentos para uma mesma função a partir de diferentes combinações dos tipos de seus argumentos</li>
+<li>Sistema de tipos dinâmico: tipos para documentação, otimização e despacho</li>
+<li>Boa performance, aproximando-se daquela de linguagens compiladas de forma estática como o C</li>
+<li>Gerenciador de pacotes embutido</li>
+<li>Macros similares a Lisp e outras funcionalidades de metaprogramação</li>
+<li>Chame funções de bibliotecas Python: utilize o pacote PyCall</li>
+<li>Chame funções de bibliotecas C diretamente: não há necessidade de wrappers ou APIs especiais</li>
+<li>Funções estilo shell poderosas para gerenciar outros processos</li>
+<li>Projetado para paralelismo e computação distribuída</li>
+<li>Coroutines: implementação leve de threading</li>
+<li>Tipos definidos pelo usuário são tão rápidos e compactos quanto os tipos nativos da linguagem</li>
+<li>Geração automática de código especializado e eficiente para diferentes tipos de argumentos</li>
+<li>Conversões e promoções elegantes e extensíveis para tipos numéricos e demais tipos</li>
+<li>Suporte eficiente para Unicode, incluindo mas não limitado ao UTF-8</li>
+<li>Licença MIT: grátis e de código aberto</li>
+</ul>
+<h3 id="aplicações">APLICAÇÕES</h3>
+<ul>
+<li>Julia é projetado para resolver problemas matemáticos numericamente, que consiste na manipulação numérica dos dados. A maioria dos problemas matemáticos reais (particularmente em engenharia) não têm soluções simbólicas puras.</li>
+</ul>
+<h2 id="o-que-julia-é-capaz-de-fazer">O QUE JULIA É CAPAZ DE FAZER</h2>
+<p>Para se ter uma ideia da performance relativa de Julia comparada a outras linguagens que podem ser utilizadas para computação numérica e científica, a tabela abaixo mostra o resultado de um benchmarks no qual vários algoritmos (códigos: https://github.com/JuliaLang/julia/tree/master/test/perf/micro) foram processados em 11 linguagens de programação diferentes. O computador utilizando nos testes apresenta a seguinte configuração: + processador Intel® Xeon® CPU E7-8850 2.00GHz (utilizado somente um núclo) - 1TB de memória RAM DDR3 de 1067MHz - Sistema operacional Linux</p>
+<p><img src="Figuras/julia-benchmark-3.png" align="center" width="850"></p>
+<p><strong>Tabela:</strong> benchmark tempo em segundos de processamento relativo ao tempo de C (quanto menor melhor, performance de = 1.0).</p>
+<p>De acordo com os testes, a linguagem <code>Julia</code> demonstra um potencial significativo de desempenho em processamento numérico frente a concorrentes de peso, como <code>Fortran</code> e <code>Golang</code></p>
+<h2 id="comparação-com-outros-softwares-de-computação-científica">COMPARAÇÃO COM OUTROS SOFTWARES DE COMPUTAÇÃO CIENTÍFICA</h2>
+<h3 id="julia-x-matlab"><code>JULIA X MATLAB</code></h3>
+<p>Julia possui uma sintaxe muito próxima do MATLAB de tal forma que os nomes da maioria das funções em Julia correspondem aos nomes do MATLAB/Octave. Quanto ao processamento, os parâmetros de referência mostram que Julia é mais rápida, dependendo do tipo de operação. Julia fornece uma interface o MATLAB através do pacote MATLAB.jl (https://​github.​com/​lindahua/​MATLAB.​jl).</p>
+<h4 id="sintaxe">Sintaxe</h4>
+<table style="height: 49px; float: left;" width="400">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</th>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Matlab</code></strong>
+</th>
+</tr>
+<tr>
+<td>
+if condição<br />      instruções<br /> elseif outra_condição<br />      instruções<br /> else<br />      outro_bloco_ainda<br /> end  
+</td>
+<td>
+if condição<br />      instruções<br /> elseif outra_condição<br />      instruções<br /> else<br />      outro_bloco_ainda<br /> end  
+</td>
+</tr>
+<tr>
+<td>
+for variável = vetor
+<p>
+     instruções;<br /> end
+</p>
+</td>
+<td>
+ for variável = vetor
+<p>
+     instruções;<br /> end
+</p>
+</td>
+</tr>
+<tr>
+<td>
+while condicao
+<p>
+     instruções;<br /> end 
+</p>
+</td>
+<td>
+while condicao
+<p>
+     instruções;<br /> end 
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+  
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ <br/> 
+</p>
+<h4 id="modelo-de-execução">Modelo de execução</h4>
+<table style="height: 49px; float: left;" width="400">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</th>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Matlab</code></strong>
+</th>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+Compilada-JIT
+</td>
+<td style="text-align: left; vertical-align: top;">
+Interpretada  
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<h4 id="paradigma-principal">Paradigma principal</h4>
+<table style="height: 49px; float: left;" width="400">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</th>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Matlab</code></strong>
+</th>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+<p>Multiparadigma</p>
+</td>
+<td style="text-align: left; vertical-align: top;">
+Multiparadigma
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<h4 id="modelo-de-tipo-de-dados">Modelo de tipo de dados</h4>
+<table style="height: 49px; float: left;" width="400">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</th>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Matlab</code></strong>
+</th>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+Dinamica
+</td>
+<td style="text-align: left; vertical-align: top;">
+Dinamica
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<h3 id="julia-x-python"><code>JULIA X PYTHON</code></h3>
+<p>Julia tem uma vantagem significativa de desempenhoem relação ao Python. Julia fornece uma interface para a linguagem ao Python com o pacote Py­Call. (https://​github.​com/​stevengj/​PyCall.​jl).</p>
+<h4 id="sintaxe-1">Sintaxe</h4>
+<table style="height: 49px; float: left;" width="400">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</th>
+<th style="text-align: left; vertical-align: top;">
+<code>Python</code>
+</th>
+</tr>
+<tr>
+<td>
+if condição<br />      instruções<br /><br /> elseif outra_condicao<br />      instruções<br /><br /> else<br />      outro_bloco_ainda<br /> end  
+</td>
+<td style="text-align: left; vertical-align: top;">
+if condição:<br />      instruções<br /><br />elseif outra_condicao:<br />      instruções<br /><br /> else:<br />      outro_bloco_ainda<br />  
+</td>
+</tr>
+<tr>
+<td>
+for variável = vetor<br />     instruções<br /> end
+</td>
+<td style="text-align: left; vertical-align: top;">
+for variável in sequência/vetor:<br />    instruções
+</td>
+</tr>
+<tr>
+<td>
+while condicao<br />     instruções<br /> end 
+</td>
+<td style="text-align: left; vertical-align: top;">
+while condicao:<br />     instruções
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+  
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ <br /> 
+</p>
+<p>
+ 
+</p>
+<h4 id="modelo-de-execução-1">Modelo de execução</h4>
+<table style="height: 49px; float: left;" width="400">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</th>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Python</code></strong>
+</p>
+</th>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+Compilada-JIT
+</td>
+<td style="text-align: left; vertical-align: top;">
+Interpretada
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<h4 id="paradigma-principal-1">Paradigma principal</h4>
+<table style="height: 49px; float: left;" width="400">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</p>
+</th>
+<th style="text-align: left; vertical-align: top;">
+<p>
+<strong><code>Python</code></strong>
+</p>
+</th>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+<p>
+Multi-paradigma
+</td>
+<td style="text-align: left; vertical-align: top;">
+Multi-paradigma
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<h4 id="modelo-de-tipo-de-dados-1">Modelo de tipo de dados</h4>
+<table style="height: 49px; float: left;" width="400">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</p>
+</th>
+<th style="text-align: left; vertical-align: top;">
+<p>
+<strong><code>Python</code></strong>
+</p>
+</th>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+Dinamica
+</td>
+<td style="text-align: left; vertical-align: top;">
+Dinamica
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<h3 id="julia-x-r"><code>JULIA X R</code></h3>
+<p>R é uma das linguagem de desenvolvimento preferido para a maioria dos estatísticos. <code>Julia</code> revela-se bem superior em desempenho e tem um conjunto de tipo muito mais rico os tipos baseados em vetores de R. Julia fornece uma interface para a linguagem R através do pacote de Rif.jl (https://​github.​com/​lgautier/​Rif.​jl).</p>
+<h4 id="sintaxe-2">Sintaxe</h4>
+<table style="height: 286px; float: left;" width="400">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</th>
+<th style="text-align: left; vertical-align: top;">
+R
+</th>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+if condição<br />      instruções<br/><br /> elseif outra_condicao<br />      instruções<br/><br /> else<br />      outro_bloco_ainda<br /> end  
+</td>
+<td style="text-align: left; vertical-align: top;">
+if (condição) {
+<p>
+    execução_principal
+</p>
+<p>
+} else {
+</p>
+<p>
+    execução_alternativa
+</p>
+<p>
+} 
+</p>
+</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+for variável = vetor<br />     instruções<br /> end
+</td>
+<td style="text-align: left; vertical-align: top;">
+for (variavel in sequencia/vetor) {
+<p>
+     instrucoes
+</p>
+<p>
+}
+</p>
+</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+while condicao<br />     instruções<br /> end                                             
+</td>
+<td style="text-align: left; vertical-align: top;">
+while (condição){
+<p>
+    instrucoes
+</p>
+<p>
+}
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<h4 id="modelo-de-execução-2">Modelo de execução</h4>
+<table style="height: 49px; float: left;" width="400">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</th>
+<th style="text-align: left; vertical-align: top;">
+<strong>R</strong>
+</th>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+Compilada-JIT
+</td>
+<td style="text-align: left; vertical-align: top;">
+Interpretada
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<h4 id="paradigma-principal-2">Paradigma principal</h4>
+<table style="height: 49px; float: left;" width="400">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</p>
+</th>
+<th style="text-align: left; vertical-align: top;">
+<p>
+<strong>R</strong>
+</p>
+</th>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+Multi-paradigma
+</td>
+<td style="text-align: left; vertical-align: top;">
+Multi-paradigma
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<h4 id="modelo-de-tipo-de-dados-2">Modelo de tipo de dados</h4>
+<table style="height: 49px; float: left;" width="400">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</p>
+</th>
+<th style="text-align: left; vertical-align: top;">
+<p>
+<strong>R</strong>
+</p>
+</th>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+Dinamica
+</td>
+<td style="text-align: left; vertical-align: top;">
+Dinamica
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<h3 id="julia-x-fortran"><code>JULIA X FORTRAN</code></h3>
+<h4 id="sintaxe-3">Sintaxe</h4>
+<table style="height: 286px; float: left;" width="443">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</th>
+<th style="text-align: left; vertical-align: top;">
+<code>Fortran</code>
+</th>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+if condição<br />      instruções<br/><br /> elseif outra_condicao<br />      instruções<br/><br /> else<br />      outro_bloco_ainda<br /> end  
+</td>
+<td style="text-align: left; vertical-align: top;">
+if (condição) then<br />      instruções <br/><br />else<br />      instruções <br /><br />end if
+</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+for variável = vetor<br />     instruções<br/><br /> end
+</td>
+<td style="text-align: left; vertical-align: top;">
+Do , numero_loops<br />  instrucoes <br />End Do
+</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+while condicao<br />     instruções<br /> end                                             
+</td>
+<td style="text-align: left; vertical-align: top;">
+do while(exp. teste)<br />    seqüência de comandos<br />end do
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<h4 id="modelo-de-execução-3">Modelo de execução</h4>
+<table style="height: 49px; float: left;" width="400">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</p>
+</th>
+<th style="text-align: left; vertical-align: top;">
+<p>
+<strong><code>Fortran</code></strong>
+</p>
+</th>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+Interpretada
+</td>
+<td style="text-align: left; vertical-align: top;">
+Compilada
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<h4 id="paradigma-principal-3">Paradigma principal</h4>
+<table style="height: 49px; float: left;" width="400">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</p>
+</th>
+<th style="text-align: left; vertical-align: top;">
+<p>
+<strong><code>Fortran</code></strong>
+</p>
+</th>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+Multi-paradigma
+</td>
+<td style="text-align: left; vertical-align: top;">
+Multi-paradigma
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<h4 id="modelo-de-tipo-de-dados-3">Modelo de tipo de dados</h4>
+<table style="height: 49px; float: left;" width="400">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</p>
+</th>
+<th style="text-align: left; vertical-align: top;">
+<p>
+<strong><code>Fortran</code></strong>
+</p>
+</th>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+Dinamico
+</td>
+<td style="text-align: left; vertical-align: top;">
+Forte, estático
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<h3 id="julia-x-c"><code>JULIA X C</code></h3>
+<p>Aqui as coisas complicam! C é sem dúvida a mais rápida, em função da sua compilação pura. Porém, em alguns testes, julia se mostra igual e até superior em função da ótima manipulação matricial. Mas o grande diferencial é o ganho de produtividade: em C perde-se mais tempo corrigindo o código do que de fato produzindo - o.</p>
+<h4 id="sintaxe-4">Sintaxe</h4>
+<table style="height: 274px; float: left;" width="400">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</th>
+<th style="text-align: left; vertical-align: top;">
+FORTRAN
+</th>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+if condição<br />      instruções<br /><br /> elseif outra_condicao<br />      instruções<br /><br /> else<br />      outro_bloco_ainda<br /> end  
+</td>
+<td style="text-align: left; vertical-align: top;">
+if (condicao) {<br />    instrucoes;<br />  }<br />  else if (condicao) {<br />      instrucoes;<br />  }<br />  else {<br />     instrucoes<br />  }<br /> <br /> }
+</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+for variável = vetor<br />     instruções<br /><br /> end
+</td>
+<td style="text-align: left; vertical-align: top;">
+for (inicialização; condição; incremento) {<br /> instruções;<br /> }
+</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+while condicao<br />     instruções<br /> end                                  
+</td>
+<td style="text-align: left; vertical-align: top;">
+while (condição) {<br />     instrucoes<br /> }
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<h4 id="modelo-de-execução-4">Modelo de execução</h4>
+<table style="height: 49px; float: left;" width="400">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</th>
+<th style="text-align: left; vertical-align: top;">
+<strong>C</strong>
+</th>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+Compilada-JIT
+</td>
+<td style="text-align: left; vertical-align: top;">
+Compilada
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<h4 id="paradigma-principal-4">Paradigma principal</h4>
+<table style="height: 49px; float: left;" width="400">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</p>
+</th>
+<th style="text-align: left; vertical-align: top;">
+<p>
+<strong>C</strong>
+</p>
+</th>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+Multi-paradigma
+</td>
+<td style="text-align: left; vertical-align: top;">
+Imperativo (processual), estruturado
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<h4 id="modelo-de-tipo-de-dados-4">Modelo de tipo de dados</h4>
+<table style="height: 49px; float: left;" width="400">
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">
+<strong><code>Julia</code></strong>
+</p>
+</th>
+<th style="text-align: left; vertical-align: top;">
+<p>
+<strong>C</strong>
+</p>
+</th>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: top;">
+Dinamico
+</td>
+<td style="text-align: left; vertical-align: top;">
+Estático, fraco
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
+<p><a href="http://blog.tiagopassos.com/wp-content/uploads/2011/06/as_diferencas_entre_as_linguagens_de_programacao_.jpg">COMO SÃO AS LINGUAGENS DE PROGRAMAÇÃO</a></p>
+<h2 id="como-aprender-julia">COMO APRENDER JULIA?</h2>
+<p>Ainda não existe livros publicados em português, mas há muito material disponível na internet além de grupos de discussão.</p>
+<h3 id="livros-tutoriais-e-manuais">LIVROS, TUTORIAIS E MANUAIS</h3>
+<ul>
+<li>Site oficial da linguagem : http://julialang.org/</li>
+<li>Tradução do manual oficial : http://julia-pt-br.readthedocs.io/pt_BR/latest/manual/introduction.html</li>
+<li>Mastering Julia: Malcolm Sherrington July 22, 2015 : https://goo.gl/JPNvhS</li>
+<li>Getting Started with Julia: Ivo Balbaert February 26, 2015: https://goo.gl/b8bpMY</li>
+<li>Julia High Performance: Avik Sengupta, 26 de abril de 2016 : https://goo.gl/hnvEvd</li>
+<li>Computational Physics (Gerson J. Ferreira: UFU): http://www.infis.ufu.br/images/users/gerson/PhysComp/FisComp.pdf</li>
+<li>Tutorial em português-Br (João Marcello : CTBJ/UFPI) : https://github.com/JuliaLangPt/tutorial</li>
+</ul>
+<h3 id="video-aulas">VIDEO AULAS</h3>
+<ul>
+<li>Play list Video aulas em português (Alexandre Gomiero): https://goo.gl/ITXKuO</li>
+<li>Canal oficial da linguagem (inglês): https://www.youtube.com/user/JuliaLanguage</li>
+<li>Evolução da linguagem (inglês): https://youtu.be/FiJ5uKJlMEc<br />
+</li>
+<li>Introduction to Julia for Python Developers : https://youtu.be/qhrY0c_BHs8<br />
+</li>
+<li>The Julia Computer Language (inglês): https://goo.gl/Qm9khV<br />
+</li>
+<li>Julia Programming Tutorial (inglês) :https://goo.gl/zAvPD0<br />
+</li>
+<li>Avaliação da linguagem julia (porguguês) :https://youtu.be/pS0XXKhDMY0</li>
+</ul>
+<h3 id="notas-de-aulas">NOTAS DE AULAS</h3>
+<ul>
+<li>Abel Siqueira (UFPR) : https://goo.gl/sIF0x4</li>
+<li>Paulo J. S. Silva (UNICAMP) : http://www.ime.unicamp.br/~pjssilva/blog/notas_ms211/</li>
+</ul>
+<h3 id="trabalhos-acadêmicos-teses-dissertações-tcc-artigos-e-outros">TRABALHOS ACADÊMICOS (Teses, Dissertações, TCC, Artigos e outros)</h3>
+<ul>
+<li>Otimização de estruturas reticuladas utilizando algoritmos genéticos http://repositorio.unb.br/handle/10482/19863</li>
+<li>Aplicação do método de elementos finitos semi-embutidos na simulação de vigas de concreto armado : http://repositorio.unb.br/handle/10482/18661</li>
+<li>Simulação computacional de um relogio atômico com átomos frios : http://goo.gl/R3QqAh</li>
+<li>Linguagem de Programação Julia: Uma Alternativa Open Source e de Alto Desempenho ao Matlab: https://goo.gl/4HA1Qh</li>
+</ul>
+<h3 id="notícias-na-mídia">NOTÍCIAS NA MÍDIA</h3>
+<ul>
+<li>Julia, Linguagem de programação científica : http://forum.intonses.com.br/viewtopic.php?t=289553</li>
+<li>A ambiciosa linguagem de programação que quer substituir Python, R e Matlab : http://gizmodo.uol.com.br/julia-linguagem-programacao/</li>
+<li>Julia linguagem de programação: https://pt.wikipedia.org/wiki/Julia_(linguagem_de_programa%C3%A7%C3%A3o</li>
+<li>Julia - A princesinha do cientista de dados: http://www.cienciaedados.com/julia-a-princesinha-do-cientista-de-dados/</li>
+</ul>
+<h3 id="grupo-de-discussão">GRUPO DE DISCUSSÃO</h3>
+<ul>
+<li>Grupo no Gitter: https://gitter.im/JuliaLangPt/julia</li>
+</ul>
+<h2 id="casos-de-sucesso-com-julia">CASOS DE SUCESSO COM JULIA</h2>
+<h2 id="destaques-julia-0.5.x">DESTAQUES JULIA 0.5.X</h2>
+<h2 id="como-julia-funciona">COMO JULIA FUNCIONA?</h2>
+<h3 id="compilação-x-interpretação">COMPILAÇÃO X INTERPRETAÇÃO</h3>
+</body>
+</html>
