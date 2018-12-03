@@ -1,0 +1,11 @@
+/* início script */
+
+f(x, y):= x*y;
+
+a: 5;
+b: 2;
+
+Resultado: f(a,b);
+
+/* fim script */
+
